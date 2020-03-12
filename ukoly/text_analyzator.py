@@ -1,7 +1,6 @@
 print('-' * 80)
 print('Welcome to the app. Please log in: ')
-username = input('USERNAME: ')
-password = input('PASSWORD: ')
+username, password = input('USERNAME: '), input('PASSWORD: ')
 print('-' * 80)
 
 registered_user = dict(bob = '123', ann = 'pass123', mike = 'password123', liz = 'pass123')
@@ -64,15 +63,15 @@ num_summed = 0
 i = 0
 while i < len(words):
     if words[i].istitle():
-        titlecase = titlecase + 1
+        titlecase += 1
     elif words[i].isupper():
-        uppercase = uppercase + 1
+        uppercase += 1
     elif words[i].islower():
-        lowercase = lowercase + 1
+        lowercase += 1
     elif words[i].isnumeric():
-        numeric = numeric + 1
-        num_summed = num_summed + float(words[i])
-    i = i + 1
+        numeric += 1
+        num_summed += float(words[i])
+    i += 1
 
 print('There are', str(len(words)), 'words in the selected text.')
 print('There are', str(titlecase), 'titlecase words')
@@ -94,10 +93,8 @@ while i < len(lengths_words):
     else:
         str_len = str(length)
     print(str_len, '*' * frequencies, frequencies)
-    i = i + 1
+    i += 1
 
 print('-' * 80)
 print('If we summed all the numbers in this text we would get: ' + str(num_summed))
 print('-' * 80)
-
-
