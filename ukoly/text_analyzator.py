@@ -1,7 +1,9 @@
-print('-' * 80)
+def repeat_char(char, num_repetitions):
+    return char * num_repetitions
+print(repeat_char('-',80))
 print('Welcome to the app. Please log in: ')
 username, password = input('USERNAME: '), input('PASSWORD: ')
-print('-' * 80)
+print(repeat_char('-',80))
 
 registered_user = dict(bob = '123', ann = 'pass123', mike = 'password123', liz = 'pass123')
 
@@ -44,7 +46,7 @@ select_number = int(input('Enter a number btw. 1 and 3 to select: '))
 if select_number == 0 or select_number > 3:
     print('Incorrect number!')
     quit()
-print('-' * 80)
+print(repeat_char('-',80))
 
 text = TEXTS[select_number-1].split()
 
@@ -78,7 +80,7 @@ print('There are', str(titlecase), 'titlecase words')
 print('There are', str(uppercase), 'uppercase words')
 print('There are', str(lowercase), 'lowercase words')
 print('There are', str(numeric), 'numeric strings')
-print('-' * 80)
+print(repeat_char('-',80))
 
 counts_words = {}
 i = 0
@@ -95,6 +97,6 @@ while i < len(lengths_words):
     print(str_len, '*' * frequencies, frequencies)
     i += 1
 
-print('-' * 80)
+print(repeat_char('-',80))
 print('If we summed all the numbers in this text we would get: ' + str(num_summed))
-print('-' * 80)
+print(repeat_char('-',80))
